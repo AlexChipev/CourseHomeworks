@@ -13,7 +13,7 @@ namespace ConsoleApplication11
             int b;
             string a;
             b = 10;
-            a = "hello";
+            a = hello;
             if (b > 0) Console.WriteLine(a);
             Console.ReadLine();
         }
