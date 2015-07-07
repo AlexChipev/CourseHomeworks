@@ -10,20 +10,26 @@ namespace SumOfEvens
     {
         static void Main(string[] args)
         {
-            Console.Write("Please enter an array value: ");
-            int n = int.Parse(Console.ReadLine());
-            int[] array = new int[n];
+
+            int[,] arr = new int[3, 3]
+           {
+               {4,5,8},
+               {12,56,7},
+               {3,24,9}
+           };
             int result = 0;
 
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < arr.GetLength(0); i++)
             {
-                if (i % 2 == 0)
-                    result += i;
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    if (i % 2 == 0 && j % 2 == 0)
 
+                        result = i + j;
+                    Console.WriteLine(result);
+                }
             }
-             Console.WriteLine("The sum of evens is: " + result);
-        }
-          
         }
     }
-    
+
+}

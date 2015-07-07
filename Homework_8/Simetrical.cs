@@ -10,28 +10,31 @@ namespace Simetrical
     {
         static void Main(string[] args)
         {
-            for (int i = 10; i <= 999; i++)
+          // int[] arr = new int[999];
+            //for (int i = 10; i <= 999; i++)
             {
-                SimmetricNumbers(i);  
+                for (int i = 10; i < 999; i++)
+                    SimmetricNumbers(i);
             }
         }
 
-        private static int SimmetricNumbers(int simmetrical)
+        private static void SimmetricNumbers(int simmetrical)
         {
 
+
+            int[] array = new int[999];
+            array[0] = array.Length;
+            array[1] = array.Length;
+
+            for (int i = 0; i < array.Length; i++)
             {
-                if (simmetrical % 11 == 0 && simmetrical <= 99)
-                   
-                Console.WriteLine("Simmetrical: {0}", simmetrical);
-
-                if (simmetrical % 101 == 0 && simmetrical >= 100 && simmetrical <= 999)
-                 
-                Console.WriteLine("Simmetrical: {0}", simmetrical);
-                return simmetrical;
-
+                simmetrical = array[i];
             }
-        } 
-            } 
-        }
-    
+                if (array[0] == array[1])
 
+                    Console.WriteLine(simmetrical);
+            
+                }
+     
+            }
+        }
